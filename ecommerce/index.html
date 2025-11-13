@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopHub</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN (FIXES ICONS) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">Logo</div>
+        <nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+
+        <!-- NEW BUTTONS ADDED -->
+        <li><a href="login.html" class="nav-auth">Login</a></li>
+        <li><a href="signup.html" class="nav-auth signup-btn">Signup</a></li>
+
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
+    </ul>
+</nav>
+
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ShopHub: Your Ultimate Shopping Destination!</h1>
+            <p>Discover a seamless shopping experience with our robust e-commerce web application,
+                designed to elevate your online retail business and enhance customer engagement.</p>
+
+            <button class="btn-primary">Check our products</button>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us">
+        <h2>Why choose our shop?</h2>
+
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="icon-box"><i class="fa-solid fa-cart-shopping"></i></div>
+                <h3>Fast shipping</h3>
+                <p>Experience rapid delivery with our e-commerce platform, ensuring your products
+                   reach customers quickly and efficiently.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="icon-box"><i class="fa-solid fa-trophy"></i></div>
+                <h3>Quality</h3>
+                <p>Our e-commerce application ensures high performance, security, and reliability for
+                   seamless online shopping experiences.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="icon-box"><i class="fa-solid fa-wallet"></i></div>
+                <h3>Security</h3>
+                <p>Ensuring robust security measures protects user data, transactions, and maintains
+                   trust in the online retail environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BESTSELLERS -->
+    <section class="bestsellers">
+        <h2>Bestsellers</h2>
+
+        <div class="product-row">
+            <div class="product">
+                <h4>Custom E-Commerce Platform Design</h4>
+                <p class="price">499.99 USD</p>
+            </div>
+
+            <div class="product">
+                <h4>Customer Support Suite</h4>
+                <p class="price">179.99 USD</p>
+            </div>
+
+            <div class="product">
+                <h4>Custom Mobile Optimization</h4>
+                <p class="price">199.99 USD</p>
+            </div>
+        </div>
+
+        <button class="btn-primary center-btn">Check all</button>
+    </section>
+
+    <!-- HISTORY -->
+    <section class="history-section">
+        <div class="history-image">
+            <img src="assets/history.jpg" alt="">
+        </div>
+
+        <div class="history-content">
+            <h2>Our history</h2>
+            <p>
+                Our journey began with the vision to revolutionize online retail. Over the years, we have
+                developed robust e-commerce platforms, empowering businesses to thrive in the digital
+                marketplace, enhancing customer experiences, and driving growth through innovative
+                technology and strategic solutions.
+            </p>
+
+            <button class="btn-secondary">Read more</button>
+        </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS -->
+    <section class="reviews">
+        <h2>Customer reviews</h2>
+        <p class="subtitle">
+            Discover authentic customer reviews that highlight experiences with our products and services.
+            Join a community of satisfied shoppers sharing insights to help you make informed purchasing decisions.
+        </p>
+
+        <div class="reviews-row">
+            <div class="review-card">
+                <img src="assets/user1.jpg" class="avatar">
+                <p>I had a great shopping experience; the selection is wonderful, and customer service is excellent!</p>
+                <strong>@Julio_Diaz</strong>
+            </div>
+
+            <div class="review-card">
+                <img src="assets/user2.jpg" class="avatar">
+                <p>I really enjoy shopping here! The selection is great, and the customer service is always helpful.</p>
+                <strong>@Lisa_Wright</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-col">
+            <h4>Menu</h4>
+            <a>Home</a>
+            <a>About us</a>
+            <a>Products</a>
+            <a>Contact</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Customer service</h4>
+            <a>Terms and conditions</a>
+            <a>Privacy policy</a>
+
+            <p class="footer-label">Shipping partner:</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/DHL_Logo.svg" class="footer-logo">
+
+            <p class="footer-label">Secure payments with:</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Stripe_Logo%2C_revised_2016.svg" class="footer-logo">
+        </div>
+
+        <div class="footer-col">
+            <h4>Contact us</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Surapet Main Road 123<br>Chennai, 600066</p>
+            <p><i class="fa-solid fa-phone"></i> Phone number: 123-456-7890</p>
+            <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Follow us</h4>
+            <div class="socials">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

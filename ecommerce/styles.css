@@ -1,0 +1,397 @@
+/* -----------------------------------
+   GLOBAL STYLING
+----------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    color: #0b0b3b;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    color: #0b0b3b;
+}
+
+p {
+    color: #333;
+    line-height: 1.7;
+}
+
+/* -----------------------------------
+   NAVBAR
+----------------------------------- */
+.navbar {
+    width: 100%;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0b0b3b;
+    border: 2px dashed rgba(0,0,0,0.2);
+    padding: 10px 20px;
+    border-radius: 12px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #0b0b3b;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.navbar ul li i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Navbar Auth Buttons */
+/* Navbar Auth Buttons */
+.nav-auth {
+    padding: 8px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    border: 2px solid #0b0b3b;
+    color: #0b0b3b;
+    transition: 0.3s;
+}
+
+/* Login button hover */
+.nav-auth:hover {
+    background: #0b0b3b;
+    color: #fff;
+}
+
+/* Signup button — ALWAYS white text */
+.signup-btn {
+    background: #0b0b3b;
+    color: #fff !important;   /* FORCE WHITE TEXT */
+    border-color: #0b0b3b;
+}
+
+.signup-btn:hover {
+    opacity: 0.85;
+}
+
+
+/* -----------------------------------
+   HERO SECTION
+----------------------------------- */
+.hero {
+    background: url("assets/hero.jpg") no-repeat center/cover;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 140px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #111868;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+.btn-secondary {
+    background: #ff4f1f;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    opacity: 0.85;
+}
+
+/* -----------------------------------
+   WHY CHOOSE US
+----------------------------------- */
+.why-us {
+    padding: 100px 80px;
+    background: #f2eeee;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.why-grid {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.why-item {
+    max-width: 330px;
+}
+
+.icon-box {
+    width: 90px;
+    height: 90px;
+    background: #ff5922;
+    color: #fff;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto;
+    font-size: 36px;
+}
+
+.why-item h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #0b0b3b;
+}
+
+.why-item p {
+    color: #444;
+    font-size: 16px;
+}
+
+/* -----------------------------------
+   BESTSELLERS
+----------------------------------- */
+.bestsellers {
+    padding: 100px 80px;
+    text-align: center;
+}
+
+.bestsellers h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.product-row {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin-bottom: 50px;
+}
+
+.product {
+    max-width: 250px;
+}
+
+.product h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #0b0b3b;
+    font-weight: 700;
+}
+
+.center-btn {
+    margin-top: 20px;
+}
+
+/* -----------------------------------
+   HISTORY SECTION
+----------------------------------- */
+.history-section {
+    padding: 100px 80px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.history-image img {
+    width: 550px;
+    border-radius: 12px;
+}
+
+.history-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.history-content p {
+    margin-bottom: 30px;
+}
+
+/* -----------------------------------
+   CUSTOMER REVIEWS
+----------------------------------- */
+.reviews {
+    padding: 100px 80px;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 17px;
+}
+
+.reviews-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.review-card {
+    width: 420px;
+    padding: 35px 30px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background: #fff;
+}
+
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.review-card strong {
+    display: block;
+    margin-top: 15px;
+    color: #0b0b3b;
+    font-weight: 600;
+}
+
+/* Fade-in animation */
+.why-item,
+.product,
+.review-card,
+.history-section,
+.hero-content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -----------------------------------
+   FOOTER
+----------------------------------- */
+.footer {
+    background: #101564;
+    padding: 100px 80px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.footer-col {
+    width: 23%;
+}
+
+.footer-col h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.footer-col a {
+    display: block;
+    color: #fff;
+    opacity: 1;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.footer-label {
+    margin: 15px 0 5px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.footer-logo {
+    width: 95px;
+    margin-bottom: 10px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+    font-size: 28px;
+    color: #fff;
+}
+
+.socials i {
+    color: #fff;
+    cursor: pointer;
+}

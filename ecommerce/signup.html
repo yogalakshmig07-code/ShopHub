@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopHub — Signup</title>
+
+  <!-- Shared main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    /* PAGE-SPECIFIC SMALL STYLES */
+    .auth-wrapper {
+      padding: 140px 24px 80px;
+      background: #f7f7fb;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .auth-card {
+      width: 100%;
+      max-width: 600px;
+      background: #fff;
+      padding: 40px 32px;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .auth-card h2 {
+      margin-bottom: 8px;
+      color: #0b0b3b;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .auth-card p.lead {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .form-row {
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-row input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #e6e6ee;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .form-row input:focus {
+      border-color: #111868;
+      box-shadow: 0 6px 16px rgba(17,24,104,0.06);
+    }
+
+    .input-error {
+      border-color: #ff4f4f !important;
+      box-shadow: 0 6px 18px rgba(255,79,79,0.08);
+    }
+
+    .social-signup {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .social-signup button {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #e6e6ee;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .auth-wrapper { padding-top: 100px; }
+      .navbar { padding: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Logo</div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#bestsellers">Products</a></li>
+        <li><a href="index.html#history">About us</a></li>
+        <li><a href="login.html" class="nav-cta">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SIGNUP FORM -->
+  <main class="auth-wrapper" aria-live="polite">
+    <div class="auth-card" role="region" aria-labelledby="signup-title">
+      
+      <h2 id="signup-title">Create your account</h2>
+      <p class="lead">Join ShopHub and enjoy personalized shopping, saved items, and order tracking.</p>
+
+      <form id="signupForm" novalidate>
+
+        <div class="form-row">
+          <label for="fullname">Full name</label>
+          <input id="fullname" name="fullname" type="text" required placeholder="Your full name">
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required placeholder="Choose a password">
+        </div>
+
+        <div class="form-row">
+          <label for="confirm">Confirm password</label>
+          <input id="confirm" name="confirm" type="password" required placeholder="Re-enter password">
+        </div>
+
+        <button type="submit" class="btn-primary" style="width:100%;margin-top:18px;">Create account</button>
+
+        <p style="margin-top:18px;color:#555;font-size:14px;">
+          Already have an account?
+          <a href="login.html" style="color:#111868;font-weight:600;">Login</a>
+        </p>
+
+        <div class="social-signup">
+          <button type="button" onclick="alert('Google signup placeholder')">
+            <i class="fa-brands fa-google"></i> Google
+          </button>
+          <button type="button" onclick="alert('Facebook signup placeholder')">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" style="padding:40px 24px;">
+    <div class="footer-col"><h4>Menu</h4><a href="index.html">Home</a><a href="index.html#history">About</a></div>
+    <div class="footer-col"><h4>Support</h4><a>Privacy</a><a>Terms</a></div>
+    <div class="footer-col"><h4>Contact</h4><p>contact@example.com</p></div>
+    <div class="footer-col"><h4>Follow</h4><div class="socials"><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></div></div>
+  </footer>
+
+  <!-- Shared Script -->
+  <script src="script.js"></script>
+
+  <!-- Page-specific behavior -->
+  <script>
+    const signupForm = document.getElementById('signupForm');
+    if (signupForm) {
+      signupForm.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        const ok = (typeof validateFormSimple === 'function') ? validateFormSimple(this) : true;
+        if (!ok) {
+          alert('Please fill required fields.');
+          return;
+        }
+
+        const pass = document.getElementById('password').value.trim();
+        const confirm = document.getElementById('confirm').value.trim();
+
+        if (pass !== confirm) {
+          alert('Passwords do not match.');
+          document.getElementById('password').classList.add('input-error');
+          document.getElementById('confirm').classList.add('input-error');
+          return;
+        }
+
+        alert('Account created successfully (placeholder)!');
+        // you can redirect here:
+        // window.location.href = 'login.html';
+      });
+    }
+  </script>
+
+</body>
+</html>

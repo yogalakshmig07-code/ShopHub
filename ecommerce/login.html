@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopHub — Login</title>
+
+  <!-- Main stylesheet (shared) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN (ensures icons render) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Page-specific tiny styles -->
+  <style>
+    /* keep the look consistent with main site but center the form */
+    .auth-wrapper {
+      padding: 140px 24px 80px;
+      background: #f7f7fb;
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .auth-card {
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      padding: 36px 32px;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .auth-card h2 {
+      margin-bottom: 8px;
+      color: #0b0b3b;
+      font-size: 28px;
+    }
+
+    .auth-card p.lead {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .form-row {
+      margin-bottom: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-row input[type="email"],
+    .form-row input[type="password"],
+    .form-row input[type="text"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #e6e6ee;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .form-row input:focus {
+      border-color: #111868;
+      box-shadow: 0 6px 16px rgba(17,24,104,0.06);
+    }
+
+    .form-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #444;
+      font-size: 14px;
+    }
+
+    .auth-footer {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .social-login {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .social-login button {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #e6e6ee;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .input-error {
+      border-color: #ff4f4f !important;
+      box-shadow: 0 6px 18px rgba(255,79,79,0.06);
+    }
+
+    @media (max-width: 720px) {
+      .auth-wrapper { padding-top: 100px; }
+      .navbar { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="logo">Logo</div>
+
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#bestsellers">Products</a></li>
+        <li><a href="index.html#history">About us</a></li>
+        <li><a href="signup.html" class="nav-cta">Signup</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- AUTH WRAPPER -->
+  <main class="auth-wrapper" aria-live="polite">
+    <div class="auth-card" role="region" aria-labelledby="login-title">
+      <h2 id="login-title">Welcome back</h2>
+      <p class="lead">Log in to your account to access orders, saved items, and your profile.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+        </div>
+
+        <div class="form-row">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required placeholder="Your password" />
+        </div>
+
+        <div class="form-actions">
+          <label class="remember">
+            <input type="checkbox" name="remember" />
+            Remember me
+          </label>
+
+          <a href="#" style="color:#111868;font-weight:600;text-decoration:none;">Forgot password?</a>
+        </div>
+
+        <div style="margin-top:20px;">
+          <button type="submit" class="btn-primary" style="width:100%;">Login</button>
+        </div>
+
+        <div class="auth-footer">
+          <div style="margin-top:14px;">Don't have an account? <a href="signup.html" style="color:#111868;font-weight:600;">Sign up</a></div>
+
+          <div class="social-login" aria-hidden="false">
+            <button type="button" onclick="alert('Social login placeholder')">
+              <i class="fa-brands fa-google"></i> Google
+            </button>
+            <button type="button" onclick="alert('Social login placeholder')">
+              <i class="fa-brands fa-facebook"></i> Facebook
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- footer (reuse same structure) -->
+  <footer class="footer" style="padding:40px 24px;">
+    <div class="footer-col"><h4>Menu</h4><a href="index.html">Home</a><a href="index.html#history">About</a></div>
+    <div class="footer-col"><h4>Support</h4><a>Privacy</a><a>Terms</a></div>
+    <div class="footer-col"><h4>Contact</h4><p>contact@example.com</p></div>
+    <div class="footer-col"><h4>Follow</h4><div class="socials"><i class="fa-brands fa-facebook"></i> <i class="fa-brands fa-instagram"></i></div></div>
+  </footer>
+
+  <!-- Script (shared) -->
+  <script src="script.js"></script>
+  <script>
+    // the shared script exposes validateFormSimple
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+      loginForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        // validate using function from script.js
+        const ok = (typeof validateFormSimple === 'function') ? validateFormSimple(this) : true;
+        if (!ok) {
+          alert('Please fill required fields.');
+          return;
+        }
+
+        // placeholder behaviour: replace with real authentication
+        alert('Login successful (placeholder)');
+        // optionally redirect to home:
+        // window.location.href = 'index.html';
+      });
+    }
+  </script>
+</body>
+</html>
